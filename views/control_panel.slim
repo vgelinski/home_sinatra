@@ -1,0 +1,9 @@
+p
+div
+  img id="lamp_img" onclick="changeLampState()" src="#{DeviceManager.instance.is_lamp_on? ? "/images/lamp_on.png" : "/images/lamp_off.png"}"
+  div
+    label Аларма
+    p
+    input id="alarm_time" value="#{Settings.alarm_time}"
+    button onclick="setAlarm()" Задай
+    button onclick="cancelAlarm()" Отмени

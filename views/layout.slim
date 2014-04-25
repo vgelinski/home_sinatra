@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    title Дом - Бъди вкъщи навсякъде
+    link rel="stylesheet" media="screen, projection" href="/css/main.css"
+    link rel="stylesheet" media="screen, projector" href="/css/jquery-ui.css"
+    link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"
+    script type="text/javascript" src="/js/jquery-1.8.3.js"
+    script type="text/javascript" src="/js/jquery-ui-1.9.2.js"
+    script type="text/javascript" src="/js/timepicker-addon.js"
+    script type="text/javascript" src="/js/noty/jquery.noty.js"
+    script type="text/javascript" src="/js/noty/layouts/top.js"
+    script type="text/javascript" src="/js/noty/layouts/bottomLeft.js"
+    script type="text/javascript" src="/js/noty/themes/default.js"
+    script type="text/javascript" src="/js/main.js"
+    script type="text/javascript" src="/js/highcharts/highcharts.js"
+    script type="text/javascript" src="/js/highcharts/modules/exporting.js"
+  body onload="onLoad()"
+    div id="wrapper"
+      div id="header"
+        div id="logo"
+          h1 
+            a href="/" Дом
+          p Бъди вкъщи навсякъде!
+        a id="btn_logout" onclick="logout()"
+          img src="/images/logout.png"
+      div id="menu"
+        ul
+          li class="#{@current_page == "home" ? "current_page_item" : ""}"
+            a href="/" Начало
+          li class="#{@current_page == "statistics" ? "current_page_item" : ""}"
+            a href="/statistics" Статистика
+          li class="#{@current_page == "live" ? "current_page_item" : ""}"
+            a href="/live" На живо от вкъщи
+          li class="#{@current_page == "control_panel" ? "current_page_item" : ""}"
+            a href="/control_panel" Управление
+          li class="#{@current_page == "settings" ? "current_page_item" : ""}"
+            a href="/settings" Настройки
+          li class="#{@current_page == "notification" ? "current_page_item" : ""}"
+            a href="/notification" Известяване
+==yield

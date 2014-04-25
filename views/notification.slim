@@ -1,0 +1,19 @@
+div
+  p
+  input id="temperature_notify_enabled" checked={Settings.temperature_notifyng_enabled?} type="checkbox" Разреши известяване за ниска температура
+  p
+  label Трябва да са минали
+  input id="temperature_notify_minimal_interval" value="#{Settings.temperature_notify_minimal_interval}"
+  label минути от предишното известяване
+  p
+  label Известявай ме при щом темпертура под
+  input id="minimal_temperature_to_notify" value="#{Settings.minimal_temperature_to_notify.to_f.round 1}"
+  label  градуса
+  p
+  label Известявай ме на тези адреси
+  p
+  textarea id="notify_emails" class="emails" #{Settings.emails_to_notify.join "\n"}
+  p
+  button onclick="submitNotifications()" Запази
+  p
+  button onclick="falseAlarm()" False alarm

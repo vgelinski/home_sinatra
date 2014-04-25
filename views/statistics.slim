@@ -1,0 +1,24 @@
+div
+  p
+  label Избери период
+  p
+  label От:
+  input type="text" id="from"
+  label До:
+  input type="text" id="to"
+  label Точност:
+  select id="interval"
+    option value="minute" 1 мин
+    option value="two_minutes" 2 мин
+    option value="five_minutes" 5 мин
+    option value="ten_minutes" 10 мин
+    option value="half_hour" 30 мин
+    option value="hour" 1 час
+    option value="two_hours" 2 часа
+    option value="six_hours" 6 часа
+    option value="twelve_hours" 12 часа
+    option value="day" 1 ден
+    option value="week" 1 седм.
+    option value="month" 1 месец
+  input type="submit" value="Load" onclick="getStatisticsAjax()"
+div id="statistics_div" style="min-width: 400px; height: 400px; margin: 0 auto"

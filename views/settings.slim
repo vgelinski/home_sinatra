@@ -1,0 +1,20 @@
+div
+  p 
+  img src="/images/day_night.png" class="icon" title="Период на отчитане на дневна ел. енергия"
+  label Денят започва в 
+  input id="day_start" type="text" value="#{Settings.get "day_start"}"
+  label и свършва в
+  input id="day_end" type="text" value="#{Settings.get "day_end"}"
+  p
+  img src="/images/electricity_price.jpg" class="icon" title="Цената на 1 Kwh ел. енергия в BGN"
+  label Токът струва
+  input id="day_cost" type="text" value="#{Settings.get "day_cost"}"
+  label през деня и 
+  input id="night_cost" type="text" value="#{Settings.get "night_cost"}"
+  label през нощта.
+  p
+  img src="images/fire_1.png" class="icon" title="Мощността на ел. уред в Kw"
+  label Мощността на печката е
+  input id="heater_power" type="text" value="#{Settings.get "heater_power"}"
+  p
+  button onclick="submitSettings()" Запази 
